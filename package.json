@@ -1,0 +1,15 @@
+{
+  "name": "jalousie",
+  "version": "0.0.0",
+  "description": "Node.js interface for **pigpiod** on the Raspberry Pi Zero, 1, 2, or 3.",
+  "main": "lib/jalousie.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "npid": "0.4.0",
+    "rrdtools": "0.0.1"
+  }
+}
