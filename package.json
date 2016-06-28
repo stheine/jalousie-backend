@@ -9,7 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "moment": "2.13.0",
     "npid": "0.4.0",
     "rrdtools": "0.0.1"
+  },
+  "devDependencies": {
+    "eslint": "2.13.1"
   }
 }
