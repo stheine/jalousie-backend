@@ -11,6 +11,7 @@
   "dependencies": {
     "moment": "2.13.0",
     "npid": "0.4.0",
+    "ringbufferjs": "git+https://github.com/stheine/ringbufferjs.git",
     "rrdtools": "0.0.1"
   },
   "devDependencies": {
