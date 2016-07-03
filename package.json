@@ -12,9 +12,14 @@
     "moment": "2.13.0",
     "npid": "0.4.0",
     "ringbufferjs": "git+https://github.com/stheine/ringbufferjs.git",
-    "rrdtools": "0.0.1"
+    "rrdtools": "0.0.1",
+    "xmldom": "0.1.22",
+    "xpath": "0.0.23"
   },
   "devDependencies": {
-    "eslint": "2.13.1"
+    "eslint": "2.13.1",
+    "eslint-config-es": "0.6.10",
+    "eslint-plugin-extended": "0.2.0",
+    "eslint-plugin-mocha": "3.0.0"
   }
 }
