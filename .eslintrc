@@ -30,6 +30,8 @@
     'key-spacing': 0,
     'no-warning-comments': 0,
     'no-plusplus': 0,
+    'no-restricted-syntax': [0, 'ClassDeclaration'],
+    'max-params': 0,
 
     'keyword-spacing': ['error', {overrides: {
       catch: {after: false},
