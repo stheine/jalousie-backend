@@ -9,13 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@stheine/ringbufferjs": "0.1.0",
     "async": "2.0.0",
     "dank-do-while": "0.1.2",
     "express": "4.14.0",
     "moment": "2.13.0",
     "npid": "0.4.0",
     "promise-results": "0.6.2",
-    "ringbufferjs": "git+https://github.com/stheine/ringbufferjs.git",
     "rrdtools": "0.0.1",
     "xmldom": "0.1.22",
     "xpath": "0.0.23"
