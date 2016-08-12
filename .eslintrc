@@ -41,8 +41,6 @@
       while: {after: false}
     }}],
 
-    'max-len': ['error', 80],
-
-    'spellcheck/spell-checker': 0
+    'max-len': ['error', 80]
   }
 }
