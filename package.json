@@ -18,6 +18,9 @@
     "npid": "0.4.0",
     "promise-results": "0.6.2",
     "rrdtools": "0.0.1",
+    "stack-trace": "0.0.9",
+    "winston": "2.2.0",
+    "winston-daily-rotate-file": "1.2.0",
     "xmldom": "0.1.22",
     "xpath": "0.0.23"
   },
