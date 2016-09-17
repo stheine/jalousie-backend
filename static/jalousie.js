@@ -7,7 +7,7 @@ function updateIfSet(status, label) {
 }
 
 function getAerotecData() {
-  $.get('status').done(function(status) {
+  $.get({url: 'status', timeout: 500}).done(function(status) {
     if(status.process) {
 //      console.log(status);
       if(status.process === 'stopped') {
@@ -73,6 +73,30 @@ function getAerotecData() {
         return;
       }
     }
+  })
+  .fail(() => {
+    $('#process').css('background-color', 'rgba(255,0,0,1)');
+
+    // Anzeige
+    $('#temperatureOutside').html("-");
+    $('#temperatureDht').html("-");
+    $('#humidity').html("-");
+    $('#sunThreshold').html("-");
+    $('#windThreshold').html("-");
+    $('#mode').html("-");
+    $('#weatherCode').html("-");
+    $('#weatherText').html("-");
+
+    // Internals
+    $('#process').html('down');
+    $('#time').html("-");
+    $('#flagNight').html("-");
+    $('#flagSun').html("-");
+    $('#flagWindalarm').html("-");
+    $('#timerSunUp').html("-");
+    $('#timerSunDown').html("-");
+    $('#timerWind').html("-");
+    $('#nightDownTime').html("-");
   });
 }
 
