@@ -7,7 +7,7 @@ function updateIfSet(status, label) {
 }
 
 function getAerotecData() {
-  $.get({url: 'status', timeout: 500}).done(function(status) {
+  $.get({url: 'status', timeout: 2500}).done(function(status) {
     if(status.process) {
 //      console.log(status);
       if(status.process === 'stopped') {
@@ -144,5 +144,5 @@ $(document).ready(function() {
 
   // Schedule the update function to run every second.
   // This survives the computer hibernating (contrary to setTimeout())
-  setInterval(getAerotecData, 1000);
+  setInterval(getAerotecData, 3000);
 });
