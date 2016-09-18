@@ -6,8 +6,23 @@ function updateIfSet(status, label) {
   }
 }
 
+let getAerotecDataRunning = false;
+
 function getAerotecData() {
-  $.get({url: 'status', timeout: 2500}).done(function(status) {
+  if(getAerotecDataRunning) {
+    return;
+  }
+
+  $.get({
+    url: 'status',
+// TODO ???    timeout: 2500
+    beforeSend: () => {
+      getAerotecDataRunning = true;
+    },
+    complete: () => {
+      getAerotecDataRunning = false;
+    },
+  }).done(function(status) {
     if(status.process) {
 //      console.log(status);
       if(status.process === 'stopped') {
@@ -144,5 +159,5 @@ $(document).ready(function() {
 
   // Schedule the update function to run every second.
   // This survives the computer hibernating (contrary to setTimeout())
-  setInterval(getAerotecData, 3000);
+  setInterval(getAerotecData, 1000);
 });
