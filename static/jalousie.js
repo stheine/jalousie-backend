@@ -1,6 +1,8 @@
 function updateIfSet(status, label) {
   if(status[label] === false) {
     $('#' + label).html('-');
+  } else if(status[label] === true) {
+    $('#' + label).html('X');
   } else {
     $('#' + label).html(status[label]);
   }
