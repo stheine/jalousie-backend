@@ -4,3 +4,4 @@ build/
 *.swp
 nohup.out
 sessions/
+*.T3001OPEN

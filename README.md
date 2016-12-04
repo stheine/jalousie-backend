@@ -26,4 +26,10 @@ zur Steuerung per Browser.
 
 ## Installation
 
+## Schaltplan
+
+###
+
+[[schaltplan/AnalogDigitalWandler.jpg]]
+
 ## Usage
