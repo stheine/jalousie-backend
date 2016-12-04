@@ -30,16 +30,52 @@ zur Steuerung per Browser.
 
 ### Sonnen- & Windsensor
 
+Der `Aero` Sensor besteht intern aus dem Helligkeitssensor `SFH203P`
+und einem Schaltkontakt, der bei jeder Drehung des Windsensor
+einmal geöffnet wird.
+
+Der Helligkeitssensor wird über den A/D Wandler ausgelesen.
+
+Der Windsensor kann mit einem Pull-Up Widerstand direkt an einen
+GPIO Pin angeschlossen werden.
+
 <kbd>
 ![Sonnen/Windsensor](schaltplan/SonnenWindSensor.jpg)
 </kbd>
 
 ### A/D Wandler
 
+Der A/D Wandler ist für den Sonnensensor zuständig.
+
+Ausserdem ist hier ein `KTY21` Temperatursensor für die Innentemperatur
+angeschlossen, allerdings habe ich diesen durch den `DHT22` Sensor ersetzt,
+da der `KTY21` schwierig genau in den tatsächlichen Temperaturwert
+zu übersetzen ist.
+
+<kbd>
 ![A/D Wandler](schaltplan/AnalogDigitalWandler.jpg)
+</kbd>
 
 ### Jalousiesteuerung
 
+Die Eingänge der Jalousiesteuerung sind mit einem Pull-Up Widerstand
+beschaltet und müssen zum Signalisieren auf Low gezogen werden.
+
+Die Jalousie habe ich über Optokoppler angeschlossen, um sie klar vom
+Raspi zu trennen.
+
+<kbd>
 ![Jalousiesteuerung](schaltplan/JalousieSteuerung.jpg)
+</kbd>
+
+### DHT22
+
+Der `DHT22` Temperatur- und Luftfeuchtigkeitssensor ist deutlich einfacher
+auszuwerten, als der `KTY21` Sensor. Zusätzlich liefert er noch
+die Luftfeuchtigkeit. Zunächst hatte ich einen ´DHT11´ Sensor, allerdings
+schienen bei diesem die Werte für die Luftfeuchtigkeit nicht zu stimmen,
+so dass ich ihn ersetzt habe.
+
+TODO Schaltbild
 
 ## Usage
