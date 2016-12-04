@@ -64,6 +64,8 @@ beschaltet und müssen zum Signalisieren auf Low gezogen werden.
 Die Jalousie habe ich über Optokoppler angeschlossen, um sie klar vom
 Raspi zu trennen.
 
+TODO noch genauer den Anschluss an Aerotec und VarioTec beschreiben.
+
 <kbd>
 ![Jalousiesteuerung](schaltplan/JalousieSteuerung.jpg)
 </kbd>
@@ -72,10 +74,24 @@ Raspi zu trennen.
 
 Der `DHT22` Temperatur- und Luftfeuchtigkeitssensor ist deutlich einfacher
 auszuwerten, als der `KTY21` Sensor. Zusätzlich liefert er noch
-die Luftfeuchtigkeit. Zunächst hatte ich einen ´DHT11´ Sensor, allerdings
+die Luftfeuchtigkeit. Zunächst hatte ich einen `DHT11` Sensor, allerdings
 schienen bei diesem die Werte für die Luftfeuchtigkeit nicht zu stimmen,
 so dass ich ihn ersetzt habe.
 
 TODO Schaltbild
+
+### Aussentemperatur / Vito
+
+TODO
+
+### Wetter
+
+TODO
+
+### rrd Datenbank
+
+TODO
+
+
 
 ## Usage
