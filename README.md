@@ -30,7 +30,9 @@ zur Steuerung per Browser.
 
 ### Sonnen- & Windsensor
 
+<kbd>
 ![Sonnen/Windsensor](schaltplan/SonnenWindSensor.jpg)
+</kbd>
 
 ### A/D Wandler
 
