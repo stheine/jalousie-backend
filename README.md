@@ -28,8 +28,16 @@ zur Steuerung per Browser.
 
 ## Schaltplan
 
-###
+### Sonnen- & Windsensor
 
-![AD Wandler](schaltplan/AnalogDigitalWandler.jpg)
+![Sonnen/Windsensor](schaltplan/SonnenWindSensor.jpg)
+
+### A/D Wandler
+
+![A/D Wandler](schaltplan/AnalogDigitalWandler.jpg)
+
+### Jalousiesteuerung
+
+![Jalousiesteuerung](schaltplan/JalousieSteuerung.jpg)
 
 ## Usage
