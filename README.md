@@ -30,6 +30,6 @@ zur Steuerung per Browser.
 
 ###
 
-[[schaltplan/AnalogDigitalWandler.jpg]]
+![AD Wandler](schaltplan/AnalogDigitalWandler.jpg)
 
 ## Usage
