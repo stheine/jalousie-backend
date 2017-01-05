@@ -1,0 +1,10 @@
+[Unit]
+Description=jalousie
+After=pigpiod.service
+
+[Service]
+User=<user>
+ExecStart=<full path to>/jalousie.js
+
+[Install]
+WantedBy=multi-user.target
