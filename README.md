@@ -78,7 +78,9 @@ die Luftfeuchtigkeit. Zunächst hatte ich einen `DHT11` Sensor, allerdings
 schienen bei diesem die Werte für die Luftfeuchtigkeit nicht zu stimmen,
 so dass ich ihn ersetzt habe.
 
-TODO Schaltbild
+<kbd>
+![DHT22](schaltplan/DHT22.jpg)
+</kbd>
 
 ### Aussentemperatur / Vito
 
@@ -92,6 +94,12 @@ TODO
 
 TODO
 
+### LED
 
+Das folgende Schaltbild dient nur als Referenz, und ist nicht direkt für die Jalousiesteuerung in Verwendung.
+
+<kbd>
+![LEDsteuerung](schaltplan/LED.jpg)
+</kbd>
 
 ## Usage
