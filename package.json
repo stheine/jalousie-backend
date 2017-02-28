@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@stheine/pigpiod": "1.0.1",
+    "@stheine/pigpiod": "0.1.2",
     "@stheine/ringbufferjs": "0.1.0",
     "async": "2.1.2",
     "dank-do-while": "0.1.2",
