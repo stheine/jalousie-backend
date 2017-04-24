@@ -22,6 +22,7 @@
     "npid": "0.4.0",
     "passport": "0.3.2",
     "passport-http": "0.3.0",
+    "passport-reverseproxy": "0.1.0",
     "promise-results": "0.6.2",
     "rrdtools": "0.0.1",
     "stack-trace": "0.0.9",
