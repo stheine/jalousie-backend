@@ -26,6 +26,20 @@ zur Steuerung per Browser.
 
 ## Installation
 
+```
+<install pigpiod / http://abyz.co.uk/rpi/pigpio/download.html>
+
+sudo apt-get install rrdtool librrd-dev
+<rrdtool 1.6.0 / https://github.com/oetiker/rrdtool-1.x >
+
+<letsencrypt>
+
+<vcontrold / https://github.com/c4rd0n/vcontrold.git / http://openv.wikispaces.com/vcontrold >
+- serial
+- spi
+
+```
+
 ## Schaltplan
 
 ### Sonnen- & Windsensor

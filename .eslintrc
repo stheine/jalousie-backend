@@ -24,6 +24,7 @@
     'space-before-function-paren': [2, 'never'],
 
     'lines-around-comment': 0,
+    'line-comment-position': 0,
     'no-inline-comments': 0,
     'no-multiple-empty-lines': 0,
     'no-multi-spaces': 0,
@@ -32,6 +33,8 @@
     'no-plusplus': 0,
     'no-restricted-syntax': [0, 'ClassDeclaration'],
     'max-params': 0,
+    'no-process-exit': 0,
+    'prefer-template': 0,
 
     'keyword-spacing': ['error', {overrides: {
       catch: {after: false},
