@@ -44,6 +44,6 @@
       while: {after: false}
     }}],
 
-    'max-len': ['error', 80]
+    'max-len': ['error', 120]
   }
 }
