@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jalousie PWA</title>
+  <link rel="manifest" href="/j/manifest.json">
+  <link async rel="icon" type="image/png" href="/j/jalousie21.png">
+  <link async rel="stylesheet" href="jquery/jquery-ui.css">
+  <script type="text/javascript" src="jquery/jquery.js"></script>
+  <script type="text/javascript" src="jquery/jquery-ui.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="auth0-js/build/auth0.js"></script>
+
+  <link async rel="stylesheet" href="jalousie.css">
+  <script type="text/javascript" src="jalousie.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Jalousie</h1>
+
+    <div id="colLeft">
+      <p>
+      <div id="anzeige">
+        <div class="label">Aussentemperatur</div>
+        <div class="value"><div id="temperatureOutside">-</div></div>
+<!--          <div class="label">TemperaturKTY</div>
+        <div class="value"><div id="temperatureKty">-</div></div> -->
+        <div class="label">Raumtemperatur</div>
+        <div class="value"><div id="temperatureDht">-</div></div>
+        <div class="label">Luftfeuchtigkeit</div>
+        <div class="value"><div id="humidity">-</div></div>
+        <div class="label">Sonne</div>
+        <div class="value"><div id="sunThreshold">-</div></div>
+        <div class="label">Wind</div>
+        <div class="value"><div id="windThreshold">-</div></div>
+        <div class="label">Modus</div>
+        <div class="value"><div id="mode">-</div></div>
+        <div class="label">Wetter</div>
+        <div class="value"><div id="weatherText">-</div></div>
+      </div>
+
+      <p/>
+
+      <div id="internals">
+        <div class="label">Prozess</div>
+        <div class="value"><div id="process">-</div></div>
+<!--           <div class="label">KTY Temp &#8486;</div>
+        <div class="value"><div id="temperaturKTYWiderstand">-</div></div> -->
+<!--          <div class="label">Sonne A2D</div>
+        <div class="value"><div id="sonneA2Dval">-</div></div>
+        <div class="label">Wind Hertz</div>
+        <div class="value"><div id="windHertz">-</div></div> -->
+        <div class="label">Zeit</div>
+        <div class="value"><div id="time">-</div></div>
+        <div class="label">Flag Schaltzeit</div>
+        <div class="value"><div id="flagNight">-</div></div>
+        <div class="label">Flag Sonne</div>
+        <div class="value"><div id="flagSun">-</div></div>
+        <div class="label">Flag Windalarm</div>
+        <div class="value"><div id="flagWindalarm">-</div></div>
+        <div class="label">Timer Sonne Hoch</div>
+        <div class="value"><div id="timerSunUp">-</div></div>
+        <div class="label">Timer Sonne Runter</div>
+        <div class="value"><div id="timerSunDown">-</div></div>
+        <div class="label">Timer Wind</div>
+        <div class="value"><div id="timerWind">-</div></div>
+        <div class="label">Schaltzeit Nacht</div>
+        <div class="value"><div id="nightDownTime">-</div></div>
+        <div class="label">Wetter Code</div>
+        <div class="value"><div id="weatherCode">-</div></div>
+      </div>
+      </p>
+    </div>
+
+    <div id="colRight">
+      <p>
+        <button id="fullUp">
+          <span class="ui-icon ui-icon-arrowthickstop-1-n"></span>
+        </button>
+      </p>
+<!--        <p>
+        <button id="up">
+          <span class="ui-icon ui-icon-arrowthick-1-n"></span>
+        </button>
+      </p> -->
+      <p>
+        <button id="stop">
+          <span class="ui-icon ui-icon-stop"></span>
+        </button>
+      </p>
+<!--        <p>
+        <button id="down">
+          <span class="ui-icon ui-icon-arrowthick-1-s"></span>
+        </button>
+      </p> -->
+      <p>
+        <button id="fullDown">
+          <span class="ui-icon ui-icon-arrowthickstop-1-s"></span>
+        </button>
+      </p>
+      <p>
+        <button id="shadow">
+          <span class="ui-icon ui-icon-arrowthickstop-1-s"></span>
+          <span class="ui-icon ui-icon-arrowreturnthick-1-n"></span>
+        </button>
+      </p>
+      <p>
+        <button id="turn">
+          <span class="ui-icon ui-icon-arrowreturnthick-1-n"></span>
+        </button>
+      </p>
+    </div>
+
+    <div id="footer">
+      <a href=rest/dumpConfig target=_blank>Config</a>
+      /
+      <a href=showLogfile target=_blank>Logfile</a>
+      /
+      <a href=https://heine7.de/jalousie/jalousie.rrd target=_blank>Trend</a>
+      /
+      <a href=https://heine7.de/vito/graph.rrd target=_blank>Vito</a>
+    </div>
+  </div>
+</body>
+
+</html>
