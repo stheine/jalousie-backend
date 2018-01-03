@@ -139,6 +139,8 @@ const getData = function() {
     }
   })
   .catch(err => {
+    getDataRunning = false;
+
     document.getElementById('process').style.backgroundColor = 'red';
 
     // Anzeige
