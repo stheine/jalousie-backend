@@ -13,13 +13,6 @@ const filesToCache = [
   '/j/jalousie.css',
   '/j/jalousie21.png',
   '/j/jalousie144.png',
-  '/j/jquery/images/ui-bg_gloss-wave_60_fece2f_500x100.png',
-  '/j/jquery/images/ui-bg_gloss-wave_70_ffdd57_500x100.png',
-  '/j/jquery/images/ui-icons_3d3d3d_256x240.png',
-  '/j/jquery/images/ui-icons_bd7b00_256x240.png',
-  '/j/jquery/jquery-ui.css',
-  '/j/jquery/jquery.js',
-  '/j/jquery/jquery-ui.js',
   '/j/auth0-js/build/auth0.js',
 ];
 
