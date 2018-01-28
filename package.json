@@ -38,6 +38,8 @@
     "xpath": "0.0.27"
   },
   "devDependencies": {
+    "roboter": "0.15.4",
+    "roboter-client": "0.15.4",
     "eslint": "^4.14.0",
     "eslint-config-es": "^0.8.12",
     "eslint-plugin-extended": "0.2.0",
