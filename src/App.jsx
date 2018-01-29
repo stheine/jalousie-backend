@@ -2,17 +2,46 @@ import React, {Component} from 'react';
 
 import * as jalousie      from './jalousie';
 
+const label = {
+};
+
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      temp: '8.5',
+      getDataRunning: false,
+      online:         true,
+      temp:           '8.5',
+      status:         {},
     };
   }
 
   componentWillMount() {
     jalousie.main.bind(this)();
+  }
+
+  renderRow(name) {
+    return (
+      <tr key={name}>
+        <td>{label[name] || name}</td>
+        <td>{this.state.status[name]}</td>
+      </tr>
+    );
+  }
+
+  renderRows() {
+    const rows = [];
+
+    for(const name in this.state.status) {
+      if(!this.state.status.hasOwnProperty(name)) {
+        continue;
+      }
+
+      rows.push(this.renderRow(name));
+    }
+
+    return rows;
   }
 
   render() {
@@ -21,10 +50,7 @@ class App extends Component {
         <div>My App</div>
         <table>
           <tbody>
-            <tr>
-              <td>Temperatur</td>
-              <td>{this.state.temp}</td>
-            </tr>
+            {this.renderRows()}
           </tbody>
         </table>
       </div>

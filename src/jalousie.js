@@ -1,159 +1,66 @@
 import request from 'superagent';
 
-const apiUrl = 'https://heine7.de/j';
+// const apiUrl = 'https://heine7.de/j';
+const apiUrl = 'http://192.168.6.41:9125';
 
 const callApi = async function(endpoint, secured) {
   const url = apiUrl + endpoint;
 
-  request.get(url).end((err, res) => {
-    if(err) {
-      throw err;
-    }
+  return new Promise((resolve, reject) => {
+    request.get(url).end((err, res) => {
+      if(err) {
+        return reject(err);
+      }
 
-//  if(secured) {
-//    const accessToken = localStorage.getItem('access_token');
+//      if(secured) {
+//        const accessToken = localStorage.getItem('access_token');
 //
-//    if(!accessToken || accessToken.length === 16) {
-//      return reject(new Error(`The accessToken doesn't look right '${accessToken}'`));
-//    }
-//    xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.getItem('access_token'));
-//  }
+//        if(!accessToken || accessToken.length === 16) {
+//          return reject(new Error(`The accessToken doesn't look right '${accessToken}'`));
+//        }
+//        xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.getItem('access_token'));
+//      }
 
-    switch(res.status) {
-      case 200: // ok
-        return res.body;
+      switch(res.status) {
+        case 200: // ok
+          return resolve(res.body);
 
-//      case 401: // Unauthorized
-//        localStorage.removeItem('expires_at');
+//        case 401: // Unauthorized
+//          localStorage.removeItem('expires_at');
 //
-//        throw new Error('Authentication failed'); // TODO trigger new authentication
+//          return reject(new Error('Authentication failed')); // TODO trigger new authentication
 
-      default:
-        throw new Error(`Request ${endpoint} failed: ${res.status}/${res.statusText}`);
-    }
+        default:
+          return reject(new Error(`Request ${endpoint} failed: ${res.status}/${res.statusText}`));
+      }
+    });
   });
 };
 
-const updateIfSet = function(status, label) {
-  if(status[label] === undefined || status[label] === false) {
-    document.getElementById(label).textContent = '-';
-  } else if(status[label] === true) {
-    document.getElementById(label).textContent = 'X';
-  } else {
-    document.getElementById(label).textContent = status[label];
-  }
-};
-
-let   getDataRunning = false;
 const getData = async function() {
-  if(getDataRunning) {
+  if(this.state.getDataRunning) {
     return;
   }
 
   if(!navigator.onLine) {
-    document.getElementById('process').style.backgroundColor = 'gray';
-    document.getElementById('process').textContent = 'offline';
+    this.setState({
+      online: false,
+    });
 
     return;
   }
 
-  this.setState({temp: '1'});
-
-  return;
+  this.setState({
+    online: true,
+  });
 
   try {
-    getDataRunning = true;
+    this.setState({getDataRunning: true});
     const status = await callApi('/rest/status', true);
 
-    getDataRunning = false;
-    if(status.process) {
-//      console.log(status);
-      if(status.process === 'stopped') {
-        document.getElementById('process').style.backgroundColor = 'red';
-
-        // Anzeige
-        document.getElementById('temperatureOutside').textContent = '-';
-//        document.getElementById('temperatureKty').textContent = '-';
-        document.getElementById('temperatureDht').textContent = '-';
-        document.getElementById('humidity').textContent = '-';
-        document.getElementById('sunThreshold').textContent = '-';
-        document.getElementById('windThreshold').textContent = '-';
-        document.getElementById('mode').textContent = '-';
-        document.getElementById('weatherCode').textContent = '-';
-        document.getElementById('weatherText').textContent = '-';
-
-        // Internals
-        document.getElementById('process').textContent = status.process;
-//        document.getElementById('temperatureKtyWiderstand').textContent = '-';
-//        document.getElementById('sonneA2Dval').textContent = '-';
-//        document.getElementById('windHertz').textContent = '-';
-        document.getElementById('time').textContent = '-';
-        document.getElementById('flagNight').textContent = '-';
-        document.getElementById('flagSun').textContent = '-';
-        document.getElementById('flagWindalarm').textContent = '-';
-        document.getElementById('timerSunUp').textContent = '-';
-        document.getElementById('timerSunDown').textContent = '-';
-        document.getElementById('timerWind').textContent = '-';
-        document.getElementById('nightDownTime').textContent = '-';
-      } else if(status.process === 'running') {
-        document.getElementById('process').style.backgroundColor = 'transparent';
-
-        // Anzeige
-        updateIfSet(status, 'temperatureOutside');
-//        updateIfSet(status, 'temperatureKty');
-        updateIfSet(status, 'temperatureDht');
-        updateIfSet(status, 'humidity');
-        updateIfSet(status, 'sunThreshold');
-        updateIfSet(status, 'windThreshold');
-        updateIfSet(status, 'mode');
-        updateIfSet(status, 'weatherCode');
-        updateIfSet(status, 'weatherText');
-
-        // Internals
-        updateIfSet(status, 'process');
-//        updateIfSet(status, 'temperatureKtyWiderstand');
-//        updateIfSet(status, 'sonneA2Dval');
-//        updateIfSet(status, 'windHertz');
-        updateIfSet(status, 'time');
-        updateIfSet(status, 'flagNight');
-        updateIfSet(status, 'flagSun');
-        updateIfSet(status, 'flagWindalarm');
-        updateIfSet(status, 'timerSunUp');
-        updateIfSet(status, 'timerSunDown');
-        updateIfSet(status, 'timerWind');
-        updateIfSet(status, 'nightDownTime');
-      } else {
-        document.getElementById('process').style.backgroundColor = 'yellow';
-
-        // Internals
-        document.getElementById('process').textContent = status.process;
-      }
-    }
+    this.setState({getDataRunning: false, status, err: undefined});
   } catch(err) {
-    getDataRunning = false;
-
-    document.getElementById('process').style.backgroundColor = 'red';
-
-    // Anzeige
-    document.getElementById('temperatureOutside').textContent = '-';
-    document.getElementById('temperatureDht').textContent = '-';
-    document.getElementById('humidity').textContent = '-';
-    document.getElementById('sunThreshold').textContent = '-';
-    document.getElementById('windThreshold').textContent = '-';
-    document.getElementById('mode').textContent = '-';
-    document.getElementById('weatherCode').textContent = '-';
-    document.getElementById('weatherText').textContent = '-';
-
-    // Internals
-    document.getElementById('process').textContent = `down (${err.message})`;
-    document.getElementById('time').textContent = '-';
-    document.getElementById('flagNight').textContent = '-';
-    document.getElementById('flagSun').textContent = '-';
-    document.getElementById('flagWindalarm').textContent = '-';
-    document.getElementById('timerSunUp').textContent = '-';
-    document.getElementById('timerSunDown').textContent = '-';
-    document.getElementById('timerWind').textContent = '-';
-    document.getElementById('nightDownTime').textContent = '-';
+    this.setState({getDataRunning: false, status: {}, err});
   }
 };
 

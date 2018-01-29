@@ -12,6 +12,7 @@
     "@stheine/pigpiod": "2.0.3",
     "@stheine/ringbufferjs": "0.1.0",
     "auth0-js": "^9.0.2",
+    "cors": "^2.8.4",
     "dank-do-while": "0.1.2",
     "delay": "^2.0.0",
     "es6-promisify": "5.0.0",
