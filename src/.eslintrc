@@ -1,0 +1,13 @@
+{
+  "globals": {
+    "React": true
+  },
+
+  "plugins": [
+    "react"
+  ],
+
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}
