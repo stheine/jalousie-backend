@@ -33,7 +33,7 @@ roboter.
 //        path.join(__dirname, 'node_modules', 'my-es2015-dependency')
       ],
       https: false,
-      host: '0.0.0.0',
+      host: '192.168.6.41',
       port: 9126,
       hotReloading: true
     });
