@@ -34,7 +34,7 @@ roboter.
       ],
       https: false,
       host: '0.0.0.0',
-      port: 9125,
+      port: 9126,
       hotReloading: true
     });
   }).
