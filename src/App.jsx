@@ -47,7 +47,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div>My App</div>
+        <div>Jalousie</div>
         <table>
           <tbody>
             {this.renderRows()}
