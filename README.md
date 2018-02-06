@@ -53,9 +53,7 @@ Der Helligkeitssensor wird über den A/D Wandler ausgelesen.
 Der Windsensor kann mit einem Pull-Up Widerstand direkt an einen
 GPIO Pin angeschlossen werden.
 
-<kbd>
 ![Sonnen/Windsensor](schaltplan/SonnenWindSensor.jpg)
-</kbd>
 
 ### A/D Wandler
 
@@ -66,9 +64,7 @@ angeschlossen, allerdings habe ich diesen durch den `DHT22` Sensor ersetzt,
 da der `KTY21` schwierig genau in den tatsächlichen Temperaturwert
 zu übersetzen ist.
 
-<kbd>
 ![A/D Wandler](schaltplan/AnalogDigitalWandler.jpg)
-</kbd>
 
 ### Jalousiesteuerung
 
@@ -80,9 +76,7 @@ Raspi zu trennen.
 
 TODO noch genauer den Anschluss an Aerotec und VarioTec beschreiben.
 
-<kbd>
 ![Jalousiesteuerung](schaltplan/JalousieSteuerung.jpg)
-</kbd>
 
 ### DHT22
 
@@ -92,9 +86,7 @@ die Luftfeuchtigkeit. Zunächst hatte ich einen `DHT11` Sensor, allerdings
 schienen bei diesem die Werte für die Luftfeuchtigkeit nicht zu stimmen,
 so dass ich ihn ersetzt habe.
 
-<kbd>
 ![DHT22](schaltplan/DHT22.jpg)
-</kbd>
 
 ### Aussentemperatur / Vito
 
@@ -112,8 +104,6 @@ TODO
 
 Das folgende Schaltbild dient nur als Referenz, und ist nicht direkt für die Jalousiesteuerung in Verwendung.
 
-<kbd>
 ![LEDsteuerung](schaltplan/LED.jpg)
-</kbd>
 
 ## Usage
