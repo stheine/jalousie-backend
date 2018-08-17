@@ -37,7 +37,7 @@ html, body
   padding: 0;
 }
 
-#container #anzeige, #internals
+#container #anzeige, #internals, #strom
 {
   border-width: 1px;
   border-color: #000000;
@@ -48,14 +48,14 @@ html, body
 
 }
 
-#container #anzeige .label, #internals .label
+#container #anzeige .label, #internals .label, #strom .label
 {
   width: 120px;
   float: left;
   white-space: nowrap;
 }
 
-#container #anzeige .value, #internals .value
+#container #anzeige .value, #internals .value, #strom .value
 {
   width: 100px;
   float: right;

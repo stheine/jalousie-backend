@@ -103,6 +103,9 @@ const getData = function() {
         document.getElementById('timerSunDown').textContent = '-';
         document.getElementById('timerWind').textContent = '-';
         document.getElementById('nightDownTime').textContent = '-';
+
+        // Strom
+        document.getElementById('momentanLeistung').textContent = '-';
       } else if(status.process === 'running') {
         document.getElementById('process').style.backgroundColor = 'transparent';
 
@@ -130,6 +133,9 @@ const getData = function() {
         updateIfSet(status, 'timerSunDown');
         updateIfSet(status, 'timerWind');
         updateIfSet(status, 'nightDownTime');
+
+        // Strom
+        updateIfSet(status, 'momentanLeistung');
       } else {
         document.getElementById('process').style.backgroundColor = 'yellow';
 
@@ -163,6 +169,9 @@ const getData = function() {
     document.getElementById('timerSunDown').textContent = '-';
     document.getElementById('timerWind').textContent = '-';
     document.getElementById('nightDownTime').textContent = '-';
+
+    // Strom
+    document.getElementById('momentanLeistung').textContent = '-';
   });
 };
 

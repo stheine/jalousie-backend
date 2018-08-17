@@ -3,7 +3,7 @@
 /* eslint-disable no-undef */
 
 // Use a cacheName for cache versioning
-const cacheName = 'jalousie:v25';
+const cacheName = 'jalousie:v31';
 
 const filesToCache = [
   '/j/',
@@ -13,6 +13,8 @@ const filesToCache = [
   '/j/jalousie.css',
   '/j/jalousie21.png',
   '/j/jalousie144.png',
+  '/j/leistung.html',
+  '/j/leistung.js',
   '/j/auth0-js/build/auth0.js',
 ];
 
