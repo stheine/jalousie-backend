@@ -44,6 +44,8 @@
       while: {after: false}
     }}],
 
-    'max-len': ['error', 120]
+    'max-len': ['error', 120],
+    'comma-dangle': 0,
+    'complexity': 0,
   }
 }
