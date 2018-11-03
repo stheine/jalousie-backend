@@ -47,5 +47,6 @@
     'max-len': ['error', 120],
     'comma-dangle': 0,
     'complexity': 0,
+    'indent': ['error', 2, {'ignoreComments': 'true'}],
   }
 }
