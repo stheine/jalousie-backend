@@ -17,22 +17,22 @@
     "find-root": "1.1.0",
     "fs-extra": "8.1.0",
     "lodash": "4.17.15",
-    "mcp-spi-adc": "2.0.6",
+    "mcp-spi-adc": "2.0.7",
     "millisecond": "0.1.2",
     "moment": "2.24.0",
     "npid": "0.4.0",
-    "pigpio": "1.2.3",
+    "pigpio": "2.0.0",
     "pigpio-dht": "1.1.1",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7",
     "stack-trace": "0.0.10",
     "suncalc": "1.8.0",
-    "winston": "2.4.4",
-    "winston-daily-rotate-file": "1.7.2"
+    "winston": "3.2.1",
+    "winston-daily-rotate-file": "4.0.0"
   },
   "devDependencies": {
     "eslint": "6.3.0",
-    "eslint-config-es": "3.6.1",
+    "eslint-config-es": "3.7.0",
     "eslint-plugin-mocha": "6.1.0"
   }
 }
