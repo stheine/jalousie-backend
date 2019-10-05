@@ -1,48 +1,28 @@
 'use strict';
 
-// TODO query -> native:
-//   $('#<id>') -> const loginView = document.getElementById('login-view');
-
-//   button click ->
-//     loginBtn.addEventListener('click', event => {
-//       event.preventDefault();
-//       webAuth.authorize();
-//     });
-
-
 /* eslint-disable no-undef */
 /* eslint-disable no-alert */
 
-const apiUrl = 'https://heine7.de/j';
+// TODO const apiUrl = 'https://heine7.de/j';
+const apiUrl = 'http://192.168.6.41:9124';
 
-const callApi = function(endpoint, secured) {
+const callApi = function(endpoint) {
   return new Promise((resolve, reject) => {
     const url = apiUrl + endpoint;
     const xhr = new XMLHttpRequest();
 
     xhr.open('GET', url);
-    if(secured) {
-      const accessToken = localStorage.getItem('access_token');
 
-      if(!accessToken || accessToken.length === 16) {
-        return reject(new Error(`The accessToken doesn't look right '${accessToken}'`));
-      }
-      xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.getItem('access_token'));
-    }
     xhr.onload = function() {
       switch(xhr.status) {
         case 200: // ok
           return resolve(JSON.parse(xhr.responseText));
 
-        case 401: // Unauthorized
-          localStorage.removeItem('expires_at');
-
-          return reject(new Error('Authentication failed')); // TODO trigger new authentication
-
         default:
           return reject(new Error(`Request ${endpoint} failed: ${xhr.status}/${xhr.statusText}`));
       }
     };
+
     xhr.send();
   });
 };
@@ -59,7 +39,7 @@ const updateIfSet = function(status, label) {
 };
 
 let   getDataRunning = false;
-const getData = function() {
+const getData = async function() {
   if(getDataRunning) {
     return;
   }
@@ -72,7 +52,9 @@ const getData = function() {
   }
 
   getDataRunning = true;
-  callApi('/rest/status', true).then(status => { // TODO auth -> rest //    url: '/j/rest/status',
+  try {
+    const status = await callApi('/rest/status');
+
     getDataRunning = false;
     if(status.process) {
 //      console.log(status);
@@ -143,8 +125,7 @@ const getData = function() {
         document.getElementById('process').textContent = status.process;
       }
     }
-  })
-  .catch(err => {
+  } catch(err) {
     getDataRunning = false;
 
     document.getElementById('process').style.backgroundColor = 'red';
@@ -172,7 +153,7 @@ const getData = function() {
 
     // Strom
     document.getElementById('momentanLeistung').textContent = '-';
-  });
+  }
 };
 
 $(document).ready(() => { // TODO jquery -> native
@@ -182,47 +163,47 @@ $(document).ready(() => { // TODO jquery -> native
   // Set click events
   document.getElementById('fullUp').addEventListener('mousedown', event => {
     event.preventDefault();
-    callApi('/rest/fullUp', true);
+    callApi('/rest/fullUp');
   });
 
 //  document.getElementById('up').addEventListener('mousedown', event => {
 //    event.preventDefault();
-//    callApi('/rest/upClick', true);
+//    callApi('/rest/upClick');
 //  });
 
 //  document.getElementById('up').addEventListener('mouseup', event => {
 //    event.preventDefault();
-//    callApi('/rest/upRelease', true);
+//    callApi('/rest/upRelease');
 //  });
 
   document.getElementById('stop').addEventListener('mousedown', event => {
     event.preventDefault();
-    callApi('/rest/stop', true);
+    callApi('/rest/stop');
   });
 
 //  document.getElementById('down').addEventListener('mousedown', event => {
 //    event.preventDefault();
-//    callApi('/rest/downClick', true);
+//    callApi('/rest/downClick');
 //  });
 
 //  document.getElementById('down').addEventListener('mouseup', event => {
 //    event.preventDefault();
-//    callApi('/rest/downRelease', true);
+//    callApi('/rest/downRelease');
 //  });
 
   document.getElementById('fullDown').addEventListener('mousedown', event => {
     event.preventDefault();
-    callApi('/rest/fullDown', true);
+    callApi('/rest/fullDown');
   });
 
   document.getElementById('shadow').addEventListener('mousedown', event => {
     event.preventDefault();
-    callApi('/rest/shadow', true);
+    callApi('/rest/shadow');
   });
 
   document.getElementById('turn').addEventListener('mouseup', event => {
     event.preventDefault();
-    callApi('/rest/turn', true);
+    callApi('/rest/turn');
   });
 
   // Schedule the update function to run every second.

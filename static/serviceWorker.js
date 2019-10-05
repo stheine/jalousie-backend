@@ -15,7 +15,6 @@ const filesToCache = [
   '/j/jalousie144.png',
   '/j/leistung.html',
   '/j/leistung.js',
-  '/j/auth0-js/build/auth0.js',
 ];
 
 // During the installation phase, you'll usually want to cache static assets.

@@ -14,6 +14,7 @@
     "dank-do-while": "0.1.2",
     "delay": "4.3.0",
     "execa": "2.0.5",
+    "express": "^4.17.1",
     "find-root": "1.1.0",
     "fs-extra": "8.1.0",
     "lodash": "4.17.15",

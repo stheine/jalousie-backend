@@ -3,36 +3,26 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-alert */
 
-const apiUrl = 'https://heine7.de/j';
+// TODO const apiUrl = 'https://heine7.de/j';
+const apiUrl = 'http://192.168.6.41:9124';
 
-const callApi = function(endpoint, secured) {
+const callApi = function(endpoint) {
   return new Promise((resolve, reject) => {
     const url = apiUrl + endpoint;
     const xhr = new XMLHttpRequest();
 
     xhr.open('GET', url);
-    if(secured) {
-      const accessToken = localStorage.getItem('access_token');
 
-      if(!accessToken || accessToken.length === 16) {
-        return reject(new Error(`The accessToken doesn't look right '${accessToken}'`));
-      }
-      xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.getItem('access_token'));
-    }
     xhr.onload = function() {
       switch(xhr.status) {
         case 200: // ok
           return resolve(JSON.parse(xhr.responseText));
 
-        case 401: // Unauthorized
-          localStorage.removeItem('expires_at');
-
-          return reject(new Error('Authentication failed')); // TODO trigger new authentication
-
         default:
           return reject(new Error(`Request ${endpoint} failed: ${xhr.status}/${xhr.statusText}`));
       }
     };
+
     xhr.send();
   });
 };
@@ -49,7 +39,7 @@ const updateIfSet = function(status, label) {
 };
 
 let   getDataRunning = false;
-const getData = function() {
+const getData = async function() {
   if(getDataRunning) {
     return;
   }
@@ -62,7 +52,9 @@ const getData = function() {
   }
 
   getDataRunning = true;
-  callApi('/rest/status', true).then(status => { // TODO auth -> rest //    url: '/j/rest/status',
+  try {
+    const status = await callApi('/rest/status');
+
     getDataRunning = false;
     if(status.process) {
 //      console.log(status);
@@ -74,12 +66,11 @@ const getData = function() {
         updateIfSet(status, 'momentanLeistung');
       }
     }
-  })
-  .catch(err => {
+  } catch(err) {
     getDataRunning = false;
 
     document.getElementById('momentanLeistung').textContent = '-';
-  });
+  }
 };
 
 $(document).ready(() => { // TODO jquery -> native
