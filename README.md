@@ -40,6 +40,18 @@ sudo apt-get install rrdtool librrd-dev
 
 ```
 
+## Compiles and hot-reloads for development
+
+```bash
+npm run watch
+```
+
+## Compiles and minifies for production
+
+```bash
+npm run build
+```
+
 ## Schaltplan
 
 ### Sonnen- & Windsensor
