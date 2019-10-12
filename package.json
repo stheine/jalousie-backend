@@ -8,7 +8,8 @@
     "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage" : "https://heine7.de/j/",
+  "homepage": "https://home.heine7.de",
+  "proxy": "http://localhost:9124",
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -47,6 +48,7 @@
   "devDependencies": {
     "eslint": "6.5.1",
     "eslint-config-es": "3.14.1",
+    "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-mocha": "6.1.1"
   },
   "browserslist": {

@@ -1,4 +1,5 @@
 {
   "domain": "sthones.eu.auth0.com",
-  "clientId": "68iclNO5hs0NH90vxDm5dzCxs3KBUOYX"
+  "clientId": "68iclNO5hs0NH90vxDm5dzCxs3KBUOYX",
+  "audience": "https://home.heine7.de/backend/"
 }
