@@ -10,6 +10,7 @@ import {useAuth0}              from './react-auth0-spa';
 
 import Home                    from './views/Home';
 import Jalousie                from './components/Jalousie.jsx';
+import Strom                   from './components/Strom.jsx';
 import Profile                 from './views/Profile';
 
 // styles
@@ -22,6 +23,8 @@ const App = () => {
     return <Loading />;
   }
 
+  document.title = 'Home';
+
   return (
     <Router history={history}>
       <div id='app' className='d-flex flex-column h-100'>
@@ -31,6 +34,7 @@ const App = () => {
             <Route        path='/'        exact component={Home} />
             <PrivateRoute path='/profile'       component={Profile} />
             <PrivateRoute path='/jalousie'      component={Jalousie} />
+            <PrivateRoute path='/strom'         component={Strom} />
           </Switch>
         </Container>
       </div>

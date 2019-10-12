@@ -55,6 +55,16 @@ const NavBar = () => {
                   Jalousie
                 </NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink
+                  tag={RouterNavLink}
+                  to='/strom'
+                  exact
+                  activeClassName='router-link-exact-active'
+                >
+                  Strom
+                </NavLink>
+              </NavItem>
             </Nav>
             <Nav className='d-none d-md-block' navbar>
               {!isAuthenticated && (

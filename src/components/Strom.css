@@ -1,0 +1,21 @@
+.strom__container
+{
+  width:            280px;
+  margin:           0 0 20px 0;
+  padding:          30px 30px 30px 30px;
+  line-height:      0;
+
+  border-width:     1px;
+  border-color:     #000000;
+  border-style:     solid;
+  border-radius:    5px;
+  display:          table;
+  background-color: #fff7ef;
+}
+
+.strom__container .value
+{
+  font-size:        300px;
+  text-orientation: sideways;
+  writing-mode:     vertical-lr;
+}
