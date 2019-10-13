@@ -1,5 +1,3 @@
-/* eslint-disable unicorn/consistent-function-scoping */
-
 import React, {useEffect} from 'react';
 import PropTypes          from 'prop-types';
 import {Route}            from 'react-router-dom';
