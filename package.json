@@ -4,11 +4,11 @@
   "description": "jalousie ist eine Raspberry Pi basierte Jalousiesteuerung, die bei mir die kabelgebundene Elero AeroTec ersetzt.",
   "main": "lib/jalousie.js",
   "scripts": {
-    "watch": "react-scripts start",
+    "watch": "HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://home.heine7.de",
+  "homepage": "https://myhome.heine7.de",
   "proxy": "http://localhost:9124",
   "author": "",
   "license": "ISC",
