@@ -15,6 +15,7 @@
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.2.4",
     "@stheine/ringbufferjs": "0.1.0",
+    "async-mqtt": "^2.4.2",
     "auth0": "^2.20.0",
     "check-types": "10.0.0",
     "dank-do-while": "0.1.2",
