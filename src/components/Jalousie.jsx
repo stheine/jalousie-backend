@@ -10,7 +10,6 @@ import './Jalousie.css';
 const fields = {
   Daten: {
     temperature:        {label: 'Temperatur innen',  unit: '°C'},
-    temperatureDht:     {label: 'Temperatur DHT',    unit: '°C'},
     temperatureOutside: {label: 'Temperatur aussen', unit: '°C'},
     humidity:           {label: 'Luftfeuchtigkeit',  unit: '%rH'},
     time:               {label: 'Zeit'},
@@ -19,6 +18,7 @@ const fields = {
     weatherDescription: {label: 'Wetter'},
     weatherMain:        {label: 'Wetter'},
     weatherCode:        {label: 'Code'},
+    weatherCloudiness:  {label: 'Bewölkung',         unit: '%'},
     sunrise:            {label: 'Sonnenaufgang'},
     sunset:             {label: 'Sonnenuntergang'},
     nightDownTime:      {label: 'Abends runter'},
