@@ -42,6 +42,18 @@ const fields = {
 //  Anderes: {},
 };
 
+const printValue = function(value) {
+  if(_.isBoolean(value)) {
+    if(value) {
+      return '☒';
+    }
+
+    return '☐';
+  }
+
+  return value;
+};
+
 const Jalousie = () => {
   const [data, setData] = useState({});
 
@@ -83,13 +95,15 @@ const Jalousie = () => {
     if(section === 'Anderes') {
       _.forEach(data, (value, field) => {
         sectionOutput.push(<div key={`label-${field}`} className='colLeft'>{field}</div>);
-        sectionOutput.push(<div key={`value-${field}`} className='colRight'>{value}</div>);
+        sectionOutput.push(<div key={`value-${field}`} className='colRight'>{printValue(value)}</div>);
 
         Reflect.deleteProperty(data, field);
       });
     } else {
       _.forEach(fields[section], (fieldData, field) => {
         const {label, unit} = fieldData;
+
+        const value = data[field];
 
         sectionOutput.push(
           <div key={`label-${field}`} className='colLeft'>
@@ -98,7 +112,7 @@ const Jalousie = () => {
         );
         sectionOutput.push(
           <div key={`value-${field}`} className='colRight'>
-            {data[field]}{unit ? ` ${unit}` : ''}
+            {printValue(value)}{unit ? ` ${unit}` : ''}
           </div>
         );
 
