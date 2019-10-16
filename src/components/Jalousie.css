@@ -1,6 +1,6 @@
 .jalousie__container
 {
-  width:            280px;
+  width:            295px;
   margin:           0 0 15px 0;
   padding:          0 5px 5px 5px;
 
@@ -30,7 +30,7 @@
 
 .jalousie__container .colRight
 {
-  width:            100px;
+  width:            115px;
   float:            right;
   white-space:      nowrap;
 }
