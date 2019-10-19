@@ -13,6 +13,15 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 
 const onRedirectCallback = appState => {
+  if(window.location.search.startsWith('?code=')) {
+    const newHref = `${window.location.protocol}//${window.location.host}` +
+      `${window.location.pathname}#${appState.targetUrl}`;
+
+    window.location.href = newHref;
+
+    return;
+  }
+
   history.push(appState && appState.targetUrl ?
     appState.targetUrl :
     window.location.pathname);
