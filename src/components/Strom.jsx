@@ -42,6 +42,11 @@ const Strom = () => {
   return (
     <div className='strom__container'>
       <div className='value'>{(data.momentanLeistung || 0).toFixed(0)}</div>
+      <div className='solar'>
+        <div className='valueSolar'>{(data.apparentPower || 0).toFixed(0)}</div>
+        <div className='valueSolar'>{(data.power || 0).toFixed(0)}</div>
+        <div className='valueSolar'>{(data.reactivePower || 0).toFixed(0)}</div>
+      </div>
     </div>
   );
 };

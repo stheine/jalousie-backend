@@ -1,8 +1,7 @@
-.strom__container
-{
+.strom__container {
   width:            280px;
-  margin:           0 0 20px 0;
-  padding:          40px 00px 40px 20px;
+  margin:           0 0 0px 0;
+  padding:          0px 0px 0px 0px;
 
   border-width:     1px;
   border-color:     #000000;
@@ -12,9 +11,26 @@
   background-color: #fff7ef;
 }
 
-.strom__container .value
-{
-  font-size:        200px;
-  text-orientation: sideways;
-  writing-mode:     vertical-lr;
+.strom__container .value {
+  font-size:        115px;
+  margin:           0 20px 10px 10px;
+}
+
+.strom__container .solar {
+  width:            260px;
+  border-width:     1px;
+  border-color:     #000000;
+  border-style:     solid;
+  border-radius:    5px;
+  display:          table;
+
+  margin:           0 10px 10px 10px;
+  padding:          0px 0px 0px 0px;
+}
+
+.strom__container .valueSolar {
+  width:            70px;
+  font-size:        40px;
+  display:          inline-block;
+  margin:           0 5px 5px 5px;
 }
