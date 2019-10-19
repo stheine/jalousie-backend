@@ -25,7 +25,7 @@ const NavBar = () => {
 
   const logoutWithRedirect = () =>
     logout({
-      returnTo: window.location.href,
+      returnTo: `${window.location.protocol}//${window.location.host}${window.location.pathname}`,
     });
 
   return (
