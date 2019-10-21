@@ -9,25 +9,25 @@ import './Jalousie.css';
 
 const fields = {
   Daten: {
-    temperature:        {label: 'Temperatur innen',  unit: '°C'},
-    temperatureOutside: {label: 'Temperatur aussen', unit: '°C'},
-    humidity:           {label: 'Luftfeuchtigkeit',  unit: '%rH'},
+    temperature:        {label: 'Temperatur innen',   unit: '°C'},
+    temperatureOutside: {label: 'Temperatur aussen',  unit: '°C'},
+    humidity:           {label: 'Luftfeuchtigkeit',   unit: '%rH'},
     time:               {label: 'Zeit'},
   },
   Wetter: {
     weatherDescription: {label: 'Wetter'},
-    weatherMain:        {label: 'Wetter'},
-    weatherCode:        {label: 'Code'},
-    weatherCloudiness:  {label: 'Bewölkung',         unit: '%'},
+    weatherCloudiness:  {label: 'Bewölkung',          unit: '%'},
     sunrise:            {label: 'Sonnenaufgang'},
     sunset:             {label: 'Sonnenuntergang'},
     nightDownTime:      {label: 'Abends runter'},
     sunThreshold:       {label: 'Sonne'},
     windThreshold:      {label: 'Wind'},
-    rainLevel:          {label: 'Regen'},
   },
   Strom: {
-    momentanLeistung:   {label: 'Verbrauch aktuell', unit: 'W'},
+    momentanLeistung:   {label: 'Verbrauch aktuell',  unit: 'W'},
+    power:              {label: 'Wirkleistung (P)',   unit: 'W'},
+    reactivePower:      {label: 'Blindleistung (Q)',  unit: 'W'},
+    apparentPower:      {label: 'Scheinleistung (S)', unit: 'W'},
   },
   Intern: {
     process:            {label: 'Prozess'},
@@ -38,6 +38,7 @@ const fields = {
     flagNight:          {},
     flagSun:            {},
     flagWindalarm:      {},
+    rainLevel:          {label: 'Regen'},
   },
 //  Anderes: {},
 };

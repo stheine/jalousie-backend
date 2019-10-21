@@ -14,6 +14,7 @@
 .strom__container .value {
   font-size:        115px;
   margin:           0 20px 10px 10px;
+  text-align:       right;
 }
 
 .strom__container .solar {
@@ -30,7 +31,9 @@
 
 .strom__container .valueSolar {
   width:            70px;
-  font-size:        40px;
+  font-size:        30px;
   display:          inline-block;
   margin:           0 5px 5px 5px;
+  white-space:      nowrap;
+  text-align:       right;
 }
