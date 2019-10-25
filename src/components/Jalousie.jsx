@@ -25,9 +25,7 @@ const fields = {
   },
   Strom: {
     momentanLeistung:   {label: 'Verbrauch aktuell',  unit: 'W'},
-    power:              {label: 'Wirkleistung (P)',   unit: 'W'},
-    reactivePower:      {label: 'Blindleistung (Q)',  unit: 'W'},
-    apparentPower:      {label: 'Scheinleistung (S)', unit: 'W'},
+    power:              {label: 'Solarleisung',       unit: 'W'},
   },
   Intern: {
     process:            {label: 'Prozess'},
