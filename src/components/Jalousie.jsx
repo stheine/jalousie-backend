@@ -25,7 +25,7 @@ const fields = {
   },
   Strom: {
     momentanLeistung:   {label: 'Verbrauch aktuell',  unit: 'W'},
-    power:              {label: 'Solarleisung',       unit: 'W'},
+    solarPower:         {label: 'Solarleisung',       unit: 'W'},
   },
   Intern: {
     process:            {label: 'Prozess'},

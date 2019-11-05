@@ -43,7 +43,7 @@ const Strom = () => {
     <div className='strom__container'>
       <div className='value'>{(data.momentanLeistung || 0).toFixed(0)}</div>
       <div className='solar'>
-        <div className='valueSolar'>Solarleistung: {(data.power || 0).toFixed(0)}</div>
+        <div className='valueSolar'>Solarleistung: {(data.solarPower || 0).toFixed(0)}</div>
       </div>
     </div>
   );
