@@ -31,6 +31,7 @@
     "mcp-spi-adc": "3.0.0",
     "millisecond": "0.1.2",
     "moment": "2.24.0",
+    "nodemailer": "^6.4.2",
     "npid": "0.4.0",
     "pigpio": "2.0.1",
     "pigpio-dht": "1.1.1",
