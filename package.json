@@ -35,6 +35,7 @@
     "npid": "0.4.0",
     "pigpio": "2.0.1",
     "pigpio-dht": "1.1.1",
+    "promise-results": "^0.6.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-router-dom": "^5.1.2",
