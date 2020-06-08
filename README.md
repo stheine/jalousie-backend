@@ -108,6 +108,12 @@ TODO
 
 TODO
 
+http://www.meteoalarm.eu/documents/rss/de/DE223.rss
+https://www.dwd.de/DE/wetter/warnungen_gemeinden/warnWetter_node.html?ort=Nufringen
+http://www.unwetterzentrale.de/uwz/webservice.html
+https://www.dwd.de/DWD/warnungen/warnapp/json/warnings.json
+https://blog.mt88.eu/2017/01/19/wetterwarnungen-vom-dwd-verwenden/
+
 ### rrd Datenbank
 
 TODO
