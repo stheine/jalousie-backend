@@ -27,7 +27,7 @@
     "find-root": "1.1.0",
     "fs-extra": "8.1.0",
     "jwks-rsa": "1.7.0",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "mcp-spi-adc": "3.0.0",
     "millisecond": "0.1.2",
     "moment": "2.24.0",
