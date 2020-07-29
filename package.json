@@ -16,7 +16,7 @@
     "@auth0/auth0-spa-js": "1.6.4",
     "@stheine/ringbufferjs": "0.1.0",
     "async-mqtt": "2.5.0",
-    "auth0": "2.23.0",
+    "auth0": "2.27.1",
     "check-types": "11.1.2",
     "dank-do-while": "0.1.2",
     "delay": "4.3.0",
