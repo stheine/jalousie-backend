@@ -1,7 +1,3 @@
-node_modules/
-build/
-*~
 *.swp
-nohup.out
-sessions/
-*.T3001OPEN
+node_modules/
+package-lock.json

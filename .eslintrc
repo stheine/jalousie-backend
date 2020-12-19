@@ -36,7 +36,12 @@
 
     'array-bracket-spacing': [2, 'never'],
     'capitalized-comments': 0,
-    'comma-dangle': [2, 'always-multiline'],
+    'comma-dangle': ['error', {
+      arrays: 'always-multiline',
+      objects: 'always-multiline',
+      imports: 'always-multiline',
+      exports: 'always-multiline'
+    }],
     'dot-location': [2, 'property'],
     'indent': [
       2,
@@ -53,6 +58,7 @@
         },
       }
     ],
+    'function-call-argument-newline': 0,
     'key-spacing': 0,
     'keyword-spacing': 0,
     'line-comment-position': 0,
@@ -72,7 +78,12 @@
     'require-unicode-regexp': 0,
     'space-before-function-paren': [2, 'never'],
     'unicorn/catch-error-name': 0,
+    'unicorn/expiring-todo-comments': 0,
     'unicorn/explicit-length-check': 0,
-    'unicorn/no-zero-fractions': 0
+    'unicorn/filename-case': 0,
+    'unicorn/no-process-exit': 0,
+    'unicorn/no-zero-fractions': 0,
+    'unicorn/numeric-separators-style': 0,
+    'unicorn/prefer-ternary': 0
   }
 }

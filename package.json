@@ -1,69 +1,35 @@
 {
-  "name": "jalousie",
+  "name": "jalousie-backend",
   "version": "0.0.0",
-  "description": "jalousie ist eine Raspberry Pi basierte Jalousiesteuerung, die bei mir die kabelgebundene Elero AeroTec ersetzt.",
-  "main": "lib/jalousie.js",
+  "main": "lib/jalousie-backend.js",
   "scripts": {
-    "watch": "HTTPS=true react-scripts start",
-    "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://myhome.heine7.de",
-  "proxy": "http://localhost:9124",
-  "author": "",
-  "license": "ISC",
+  "author": "stheine@arcor.de",
+  "license": "MIT",
   "dependencies": {
-    "@auth0/auth0-spa-js": "1.6.4",
-    "@stheine/ringbufferjs": "0.1.0",
-    "async-mqtt": "2.5.0",
-    "auth0": "2.23.0",
-    "check-types": "11.1.2",
+    "async-mqtt": "2.6.1",
+    "check-types-2": "11.3.0",
     "dank-do-while": "0.1.2",
-    "delay": "4.3.0",
-    "execa": "4.0.0",
+    "dayjs": "1.9.7",
+    "delay": "4.4.0",
     "express": "4.17.1",
-    "express-jwt": "5.3.1",
-    "express-jwt-authz": "2.3.1",
     "find-root": "1.1.0",
-    "fs-extra": "8.1.0",
-    "jwks-rsa": "1.7.0",
-    "lodash": "4.17.15",
-    "mcp-spi-adc": "3.0.0",
+    "fs-extra": "9.0.1",
+    "lodash": "4.17.20",
     "millisecond": "0.1.2",
-    "moment": "2.24.0",
-    "nodemailer": "6.4.4",
+    "needle": "2.5.2",
+    "nodemailer": "6.4.17",
     "npid": "0.4.0",
-    "pigpio": "3.0.0",
     "pigpio-dht": "1.1.1",
     "promise-results": "0.6.2",
-    "react": "16.13.0",
-    "react-dom": "16.13.0",
-    "react-router-dom": "5.1.2",
-    "react-scripts": "3.4.0",
-    "reactstrap": "8.4.1",
-    "request": "2.88.2",
-    "request-promise-native": "1.0.8",
     "stack-trace": "0.0.10",
-    "suncalc": "1.8.0",
-    "winston": "3.2.1",
-    "winston-daily-rotate-file": "4.4.2"
+    "suncalc": "1.8.0"
   },
   "devDependencies": {
-    "eslint": "6.8.0",
-    "eslint-config-es": "3.19.39",
-    "eslint-plugin-json": "2.1.0",
-    "eslint-plugin-mocha": "6.3.0"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "eslint": "7.16.0",
+    "eslint-config-es": "3.26.12",
+    "eslint-plugin-json": "2.1.2",
+    "eslint-plugin-mocha": "8.0.0"
   }
 }

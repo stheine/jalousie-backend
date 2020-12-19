@@ -1,4 +1,4 @@
-# jalousie
+# jalousie-backend
 
 `jalousie` ist eine Raspberry Pi basierte Jalousiesteuerung,
 die bei mir die kabelgebundene
